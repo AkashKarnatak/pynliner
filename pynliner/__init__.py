@@ -186,7 +186,7 @@ class Pynliner(object):
         incompatibility.
         """
         if self.is_xml:
-            self.soup = BeautifulSoup(self.source_string, "xml")
+            self.soup = BeautifulSoup(self.source_string.encode('utf-8'), "xml")
             return 
         # Check if mod_wsgi is running
         # - see http://code.google.com/p/modwsgi/wiki/TipsAndTricks
